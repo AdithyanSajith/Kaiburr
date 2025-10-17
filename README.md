@@ -7,7 +7,7 @@ This repository contains implementations of various Kaiburr technical assessment
 ```
 Kaiburr/
 ├── task 1/          # Java Backend and REST API
-├── task 2/          # (Future task implementation)
+├── task 2/          # Kubernetes Deployment
 ├── task 3/          # (Future task implementation)
 └── ...
 ```
@@ -17,7 +17,7 @@ Kaiburr/
 | Task   | Title                   | Status          | Technology Stack                        | Description                                        |
 | ------ | ----------------------- | --------------- | --------------------------------------- | -------------------------------------------------- |
 | Task 1 | Java Backend & REST API | ✅ **COMPLETE** | Java 21 LTS, Spring Boot 3.2.0, MongoDB | Task management REST API with full CRUD operations |
-| Task 2 | TBD                     | 🔄 Pending      | TBD                                     | (To be implemented)                                |
+| Task 2 | Kubernetes Deployment   | ✅ **COMPLETE** | Kubernetes, Docker, Java 21, MongoDB   | K8s deployment with dynamic pod creation |
 | Task 3 | TBD                     | 🔄 Pending      | TBD                                     | (To be implemented)                                |
 
 ## 🏆 **Task 1: Java Backend and REST API - COMPLETED**
@@ -33,6 +33,19 @@ Kaiburr/
 - ✅ **Docker Support**: Containerization with Java 21 runtime
 - ✅ **Comprehensive Testing**: Unit tests and API testing documentation
 
+## 🚀 **Task 2: Kubernetes Deployment - COMPLETED**
+
+### **Key Features Implemented:**
+
+- ✅ **Kubernetes Manifests**: Complete YAML files for deployment and service
+- ✅ **MongoDB in K8s**: Separate pod with persistent volume for data storage
+- ✅ **Dynamic Pod Creation**: Tasks execute in separate Kubernetes pods using K8s API
+- ✅ **Busybox Execution**: Commands run in lightweight, secure containers
+- ✅ **RBAC Security**: Service account with proper permissions for pod management
+- ✅ **Environment Variables**: MongoDB connection via ConfigMap
+- ✅ **External Access**: NodePort service for host machine connectivity
+- ✅ **Resource Management**: CPU and memory limits for all pods
+
 ### **Quick Start (Task 1):**
 
 ```bash
@@ -45,6 +58,18 @@ mvn spring-boot:run
 
 # Access Swagger UI
 # http://localhost:8080/swagger-ui.html
+```
+
+### **Quick Start (Task 2):**
+
+```bash
+cd "Kaiburr/task 2"
+# Deploy to Kubernetes
+.\deploy.ps1
+
+# Access application
+# http://localhost:30080
+# http://localhost:30080/swagger-ui.html
 ```
 
 ### **API Endpoints (Task 1):**
@@ -68,6 +93,28 @@ mvn spring-boot:run
 - **Containerization**: Docker
 - **Testing**: JUnit, Spring Boot Test, Postman
 
+### **Task 2:**
+
+- **Language**: Java 21 LTS
+- **Framework**: Spring Boot 3.2.0
+- **Database**: MongoDB
+- **Orchestration**: Kubernetes
+- **Container Runtime**: Docker
+- **Pod Management**: Kubernetes Java Client
+- **Storage**: Persistent Volumes
+- **Security**: RBAC, Service Accounts
+
+### **Task 2:**
+
+- **Language**: Java 21 LTS
+- **Framework**: Spring Boot 3.2.0
+- **Database**: MongoDB
+- **Orchestration**: Kubernetes
+- **Container Runtime**: Docker
+- **Pod Management**: Kubernetes Java Client
+- **Storage**: Persistent Volumes
+- **Security**: RBAC, Service Accounts
+
 ## 📊 **Project Metrics**
 
 ### **Task 1 Statistics:**
@@ -77,6 +124,22 @@ mvn spring-boot:run
 - **API Endpoints**: 6 REST endpoints
 - **Security Features**: Command validation, input sanitization
 - **Documentation**: Complete API testing guide with 15+ screenshot examples
+
+### **Task 2 Statistics:**
+
+- **Lines of Code**: ~700+ lines
+- **Kubernetes Manifests**: 3 YAML files (MongoDB, App, Ingress)
+- **Pod Management**: Dynamic pod creation via Kubernetes API
+- **Services**: MongoDB + Application + NodePort
+- **Documentation**: Complete deployment and testing guides
+
+### **Task 2 Statistics:**
+
+- **Lines of Code**: ~700+ lines
+- **Kubernetes Manifests**: 3 YAML files (MongoDB, App, Ingress)
+- **Pod Management**: Dynamic pod creation via Kubernetes API
+- **Services**: MongoDB + Application + NodePort
+- **Documentation**: Complete deployment and testing guides
 
 ## 🚀 **Getting Started**
 
@@ -117,4 +180,4 @@ This repository represents completed technical assessment tasks. Each task is im
 ---
 
 **Last Updated**: October 17, 2025  
-**Status**: Task 1 Complete ✅ | Additional tasks pending 🔄
+**Status**: Task 1 Complete ✅ | Task 2 Complete ✅ | Additional tasks pending 🔄
