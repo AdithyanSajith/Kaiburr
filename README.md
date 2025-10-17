@@ -14,15 +14,16 @@ Kaiburr/
 
 ## 🎯 **Task Status Overview**
 
-| Task | Title | Status | Technology Stack | Description |
-|------|-------|--------|-----------------|-------------|
+| Task   | Title                   | Status          | Technology Stack                        | Description                                        |
+| ------ | ----------------------- | --------------- | --------------------------------------- | -------------------------------------------------- |
 | Task 1 | Java Backend & REST API | ✅ **COMPLETE** | Java 21 LTS, Spring Boot 3.2.0, MongoDB | Task management REST API with full CRUD operations |
-| Task 2 | TBD | 🔄 Pending | TBD | (To be implemented) |
-| Task 3 | TBD | 🔄 Pending | TBD | (To be implemented) |
+| Task 2 | TBD                     | 🔄 Pending      | TBD                                     | (To be implemented)                                |
+| Task 3 | TBD                     | 🔄 Pending      | TBD                                     | (To be implemented)                                |
 
 ## 🏆 **Task 1: Java Backend and REST API - COMPLETED**
 
 ### **Key Features Implemented:**
+
 - ✅ **Java 21 LTS Upgrade**: Successfully upgraded from Java 17 to Java 21 LTS
 - ✅ **REST API Endpoints**: All required CRUD operations implemented
 - ✅ **MongoDB Integration**: NoSQL document storage with repository pattern
@@ -33,6 +34,7 @@ Kaiburr/
 - ✅ **Comprehensive Testing**: Unit tests and API testing documentation
 
 ### **Quick Start (Task 1):**
+
 ```bash
 cd "Kaiburr/task 1"
 # Start MongoDB
@@ -46,6 +48,7 @@ mvn spring-boot:run
 ```
 
 ### **API Endpoints (Task 1):**
+
 - `GET /api/tasks` - Get all tasks
 - `PUT /api/tasks` - Create/update task
 - `GET /api/tasks/{id}` - Get task by ID
@@ -56,6 +59,7 @@ mvn spring-boot:run
 ## 🔧 **Technology Stack**
 
 ### **Task 1:**
+
 - **Language**: Java 21 LTS
 - **Framework**: Spring Boot 3.2.0
 - **Database**: MongoDB
@@ -67,6 +71,7 @@ mvn spring-boot:run
 ## 📊 **Project Metrics**
 
 ### **Task 1 Statistics:**
+
 - **Lines of Code**: ~500+ lines
 - **Test Coverage**: Unit tests implemented
 - **API Endpoints**: 6 REST endpoints
@@ -76,12 +81,14 @@ mvn spring-boot:run
 ## 🚀 **Getting Started**
 
 1. **Clone the repository:**
+
    ```bash
    git clone https://github.com/AdithyanSajith/Kaiburr-Task-1.git
    cd Kaiburr-Task-1
    ```
 
 2. **Navigate to specific task:**
+
    ```bash
    cd "Kaiburr/task 1"
    ```
@@ -91,6 +98,7 @@ mvn spring-boot:run
 ## 📝 **Documentation**
 
 Each task folder contains:
+
 - **README.md** - Task-specific setup and usage instructions
 - **API Documentation** - Detailed API testing guides
 - **Screenshots** - Visual proof of functionality

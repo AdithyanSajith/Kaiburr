@@ -1,0 +1,112 @@
+# ConfigMap for Application Configuration
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: task-api-config
+  labels:
+    app: task-management-api
+data:
+  MONGODB_HOST: "mongodb-service"
+  MONGODB_PORT: "27017"
+  MONGODB_DATABASE: "taskdb"
+  MONGODB_USERNAME: "admin"
+  MONGODB_PASSWORD: "password123"
+  KUBERNETES_NAMESPACE: "default"
+---
+# Task Management API Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: task-management-api
+  labels:
+    app: task-management-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: task-management-api
+  template:
+    metadata:
+      labels:
+        app: task-management-api
+    spec:
+      serviceAccountName: task-api-service-account
+      containers:
+      - name: task-management-api
+        image: task-management-api:k8s
+        ports:
+        - containerPort: 8080
+        envFrom:
+        - configMapRef:
+            name: task-api-config
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "250m"
+          limits:
+            memory: "1Gi"
+            cpu: "500m"
+        livenessProbe:
+          httpGet:
+            path: /actuator/health
+            port: 8080
+          initialDelaySeconds: 60
+          periodSeconds: 30
+        readinessProbe:
+          httpGet:
+            path: /actuator/health
+            port: 8080
+          initialDelaySeconds: 30
+          periodSeconds: 10
+---
+# Task Management API Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: task-management-api-service
+  labels:
+    app: task-management-api
+spec:
+  selector:
+    app: task-management-api
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080
+    nodePort: 30080
+  type: NodePort
+---
+# Service Account for Kubernetes API access
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: task-api-service-account
+  labels:
+    app: task-management-api
+---
+# Cluster Role for pod management
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: pod-manager
+rules:
+- apiGroups: [""]
+  resources: ["pods"]
+  verbs: ["create", "delete", "get", "list", "watch"]
+- apiGroups: [""]
+  resources: ["pods/log"]
+  verbs: ["get"]
+---
+# Cluster Role Binding
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: task-api-pod-manager
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: pod-manager
+subjects:
+- kind: ServiceAccount
+  name: task-api-service-account
+  namespace: default
