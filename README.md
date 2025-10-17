@@ -104,17 +104,6 @@ cd "Kaiburr/task 2"
 - **Storage**: Persistent Volumes
 - **Security**: RBAC, Service Accounts
 
-### **Task 2:**
-
-- **Language**: Java 21 LTS
-- **Framework**: Spring Boot 3.2.0
-- **Database**: MongoDB
-- **Orchestration**: Kubernetes
-- **Container Runtime**: Docker
-- **Pod Management**: Kubernetes Java Client
-- **Storage**: Persistent Volumes
-- **Security**: RBAC, Service Accounts
-
 ## 📊 **Project Metrics**
 
 ### **Task 1 Statistics:**
@@ -124,14 +113,6 @@ cd "Kaiburr/task 2"
 - **API Endpoints**: 6 REST endpoints
 - **Security Features**: Command validation, input sanitization
 - **Documentation**: Complete API testing guide with 15+ screenshot examples
-
-### **Task 2 Statistics:**
-
-- **Lines of Code**: ~700+ lines
-- **Kubernetes Manifests**: 3 YAML files (MongoDB, App, Ingress)
-- **Pod Management**: Dynamic pod creation via Kubernetes API
-- **Services**: MongoDB + Application + NodePort
-- **Documentation**: Complete deployment and testing guides
 
 ### **Task 2 Statistics:**
 
