@@ -278,7 +278,16 @@ server.port=8080
 
 ## Screenshots
 
-_Note: Include screenshots of your API testing here with your name and current date/time visible_
+Below are screenshots of the Task 1 API running and tested, with my name and the current date/time visible:
+
+![Backend running with name and date/time](Screenshots/Screenshot%202025-10-19%20034047.png)
+*Backend running in terminal with name and system date/time*
+
+![API test with name and date/time](Screenshots/Screenshot%202025-10-19%20034140.png)
+*API tested (e.g., GET/POST) with name and system date/time*
+
+![Project structure with name and date/time](Screenshots/Screenshot%202025-10-19%20034204.png)
+*Project structure in VS Code/File Explorer with name and system date/time*
 
 ## Project Structure
 
