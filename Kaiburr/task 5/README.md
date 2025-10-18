@@ -1,5 +1,17 @@
 # Consumer Complaint Classification
 
+## 📸 Screenshots
+
+Below are screenshots demonstrating the classification workflow, results, and steps, with name and date/time visible:
+
+![Step 1](Screenshots/Screenshot 2025-10-19 040625.png)
+![Step 2](Screenshots/Screenshot 2025-10-19 041334.png)
+![Step 3](Screenshots/Screenshot 2025-10-19 041352.png)
+![Step 4](Screenshots/Screenshot 2025-10-19 041418.png)
+![Step 5](Screenshots/Screenshot 2025-10-19 041440.png)
+![Step 6](Screenshots/Screenshot 2025-10-19 041457.png)
+![Step 7](Screenshots/Screenshot 2025-10-19 041513.png)
+
 This project demonstrates text classification on the Consumer Complaint Database. The goal is to classify complaints into four categories:
 
 - Credit reporting, credit repair services, or other personal consumer reports
