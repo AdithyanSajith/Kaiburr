@@ -205,3 +205,36 @@ This repository represents completed technical assessment tasks. Each task is im
 
 **Last Updated**: October 17, 2025  
 **Status**: Task 1 Complete ✅ | Task 2 Complete ✅ | Task 3 Complete ✅
+
+# Task 4: CI-CD Pipeline for Kaiburr Task Management App
+
+This repository includes a complete CI/CD pipeline for the Java backend (Task 1) using GitHub Actions. The pipeline automates:
+
+- **Code Build:** Compiles the backend using Maven
+- **Docker Build:** Builds a Docker image from the backend Dockerfile
+- **Test:** Runs unit tests
+- **Artifact Upload:** Uploads the built JAR file as a workflow artifact
+
+## Pipeline File
+The workflow is defined in `.github/workflows/ci-cd.yml` and runs on every push or pull request to the `main` branch.
+
+## How It Works
+1. **Checkout code**
+2. **Set up JDK 21**
+3. **Build with Maven**
+4. **Build Docker image**
+5. **Run tests**
+6. **Upload JAR artifact**
+
+## Example Workflow Status Badge
+```
+![CI-CD Pipeline](https://github.com/AdithyanSajith/Kaiburr/actions/workflows/ci-cd.yml/badge.svg)
+```
+
+## How to Submit
+- Push your code to GitHub
+- Share your repository link (e.g., https://github.com/AdithyanSajith/Kaiburr)
+- The pipeline will run automatically and show results in the Actions tab
+
+---
+For deployment or Docker publishing, contact your instructor or add steps to the workflow as needed.
