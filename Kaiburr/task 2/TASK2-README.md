@@ -81,4 +81,17 @@ task 2/
 | Pod creation for execution    | ✅     | Dynamic busybox pods           |
 | Kubernetes API integration    | ✅     | Java client with RBAC          |
 
+## 📸 Screenshots
+
+Below are screenshots demonstrating Task 2 Docker/Kubernetes deployment and verification, with my name and the current date/time visible:
+
+![Docker build and run](Screenshots/Screenshot%202025-10-19%20035003.png)
+*Docker build and run output with name and system date/time*
+
+![Kubernetes deployment](Screenshots/Screenshot%202025-10-19%20035103.png)
+*Kubernetes deployment and pods running with name and system date/time*
+
+![API test in browser/Postman](Screenshots/Screenshot%202025-10-19%20035158.png)
+*API tested via browser/Postman with name and system date/time*
+
 **Task 2 Complete - Ready for Kubernetes deployment!** 🚀
