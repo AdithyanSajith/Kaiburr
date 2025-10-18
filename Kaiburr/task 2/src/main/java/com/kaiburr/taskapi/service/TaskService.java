@@ -60,12 +60,12 @@ public class TaskService {
 
     private TaskExecution executeCommand(String taskId, String command) {
         LocalDateTime startTime = LocalDateTime.now();
-        
+
         // Execute command in Kubernetes pod using busybox
         String output = kubernetesService.executeCommandInPod(taskId, command);
-        
+
         LocalDateTime endTime = LocalDateTime.now();
-        
+
         return new TaskExecution(startTime, endTime, output);
     }
 

@@ -12,8 +12,8 @@ Write-Host "📋 Testing Kubernetes-based Task Execution" -ForegroundColor Yello
 # Test 1: Create a simple task
 Write-Host "1️⃣ Creating a simple echo task..." -ForegroundColor Cyan
 $echoTask = @{
-    name = "Kubernetes Echo Task"
-    owner = "K8s Tester"
+    name    = "Kubernetes Echo Task"
+    owner   = "K8s Tester"
     command = "echo 'Hello from Kubernetes Pod!'"
 } | ConvertTo-Json
 
@@ -31,8 +31,8 @@ Write-Host "📝 Output: $($executedTask.taskExecutions[0].output)" -ForegroundC
 # Test 3: Create and execute a more complex task
 Write-Host "3️⃣ Creating a file listing task..." -ForegroundColor Cyan
 $listTask = @{
-    name = "Kubernetes List Task"
-    owner = "K8s Tester"
+    name    = "Kubernetes List Task"
+    owner   = "K8s Tester"
     command = "ls -la && pwd && whoami"
 } | ConvertTo-Json
 
@@ -51,8 +51,8 @@ Write-Host $executedTask2.taskExecutions[0].output
 # Test 4: Create a task that demonstrates busybox capabilities
 Write-Host "5️⃣ Creating a busybox demonstration task..." -ForegroundColor Cyan
 $busyboxTask = @{
-    name = "Busybox Demo Task"
-    owner = "K8s Tester"
+    name    = "Busybox Demo Task"
+    owner   = "K8s Tester"
     command = "cat /etc/os-release && echo '---' && df -h && echo '---' && ps aux"
 } | ConvertTo-Json
 

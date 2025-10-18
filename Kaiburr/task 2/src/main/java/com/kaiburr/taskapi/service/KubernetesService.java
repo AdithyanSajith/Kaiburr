@@ -45,7 +45,7 @@ public class KubernetesService {
      */
     public String executeCommandInPod(String taskId, String command) {
         String podName = "task-execution-" + taskId + "-" + System.currentTimeMillis();
-        
+
         try {
             // Create pod
             V1Pod pod = createTaskPod(podName, command);
@@ -75,8 +75,7 @@ public class KubernetesService {
                         .name(podName)
                         .labels(Map.of(
                                 "app", "task-execution",
-                                "created-by", "kaiburr-task-api"
-                        )))
+                                "created-by", "kaiburr-task-api")))
                 .spec(new V1PodSpec()
                         .restartPolicy("Never")
                         .containers(Collections.singletonList(
@@ -89,13 +88,11 @@ public class KubernetesService {
                                         .resources(new V1ResourceRequirements()
                                                 .limits(Map.of(
                                                         "cpu", new io.kubernetes.client.custom.Quantity("100m"),
-                                                        "memory", new io.kubernetes.client.custom.Quantity("128Mi")
-                                                ))
+                                                        "memory", new io.kubernetes.client.custom.Quantity("128Mi")))
                                                 .requests(Map.of(
                                                         "cpu", new io.kubernetes.client.custom.Quantity("50m"),
-                                                        "memory", new io.kubernetes.client.custom.Quantity("64Mi")
-                                                )))
-                        )));
+                                                        "memory",
+                                                        new io.kubernetes.client.custom.Quantity("64Mi")))))));
     }
 
     private String waitForPodCompletion(String podName) throws ApiException, InterruptedException {
@@ -130,8 +127,8 @@ public class KubernetesService {
     private String getPodLogs(String podName) {
         try {
             String logs = coreV1Api.readNamespacedPodLog(
-                    podName, 
-                    namespace, 
+                    podName,
+                    namespace,
                     null, // container name (null for single container pod)
                     false, // follow
                     null, // limitBytes
@@ -151,14 +148,14 @@ public class KubernetesService {
     private void deletePod(String podName) {
         try {
             coreV1Api.deleteNamespacedPod(
-                    podName, 
-                    namespace, 
+                    podName,
+                    namespace,
                     null, // pretty
                     null, // dryRun
                     null, // gracePeriodSeconds
                     null, // orphanDependents
                     null, // propagationPolicy
-                    null  // body
+                    null // body
             );
             logger.info("Deleted pod: {}", podName);
         } catch (ApiException e) {
