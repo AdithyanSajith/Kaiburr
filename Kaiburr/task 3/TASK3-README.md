@@ -1,4 +1,15 @@
+
 # Task 3: Web UI Forms
+
+## 📸 Screenshots
+
+Below are screenshots demonstrating the Task 3 UI and error states, with name and date/time visible:
+
+![UI Error - API Connection Failed](Screenshots/Screenshot 2025-10-19 040102.png)
+*API connection error when backend is unavailable*
+
+![Browser - Can't Reach Page](Screenshots/Screenshot 2025-10-19 040151.png)
+*Browser error when frontend is not running or not reachable*
 
 ## ✅ **STATUS: FULLY IMPLEMENTED AND READY TO USE**
 
