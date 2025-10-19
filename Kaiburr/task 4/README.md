@@ -4,11 +4,13 @@
 
 Below are screenshots demonstrating the CI/CD pipeline configuration and execution, with name and date/time visible:
 
-![Pipeline Configuration](Screenshots/Screenshot 2025-10-19 040625.png)
-*GitHub Actions workflow YAML configuration*
+<img src="Screenshots/Screenshot 2025-10-19 040625.png" alt="Pipeline Configuration" width="600"/>
 
-![Pipeline Execution](Screenshots/Screenshot 2025-10-19 040858.png)
-*Pipeline run/execution status in GitHub Actions*
+_GitHub Actions workflow YAML configuration_
+
+<img src="Screenshots/Screenshot 2025-10-19 040858.png" alt="Pipeline Execution" width="600"/>
+
+_Pipeline run/execution status in GitHub Actions_
 
 This folder contains the CI/CD pipeline setup for Task 4.
 
